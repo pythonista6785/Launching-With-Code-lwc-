@@ -49,6 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'lwc.middleware.ReferMiddleware',
 )
 
 ROOT_URLCONF = 'lwc.urls'
@@ -96,6 +97,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# SHARE_URL = "http://launchwithcode.com/?ref="
+SHARE_URL ="http://10.0.10.108:8000/?ref="
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
