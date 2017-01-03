@@ -53,8 +53,6 @@ def home(request):
 		#print "this obj is: %s" %(obj.email)
 	except:
 		obj = None
-	
-
 
 	# this is using model form
 	form = JoinForm(request.POST or None)
@@ -71,12 +69,12 @@ def home(request):
 			new_join_old.save()
 			
 			#print all friends that joined as a result of main sharer email
-			print Join.objects.filter(friend=obj).count()
-			print obj.referral.all().count()
+			# print Join.objects.filter(friend=obj).count()
+			# print obj.referral.all().count()
 
 
 			#redirect here
-			return 	HttpResponseRedirect("%s" %(new_join_old.ref_id))
+		return HttpResponseRedirect("/%s" %(new_join_old.ref_id))
 
 	context = {"form":form}
 	template = 'home.html'

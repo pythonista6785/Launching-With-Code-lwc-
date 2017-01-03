@@ -98,9 +98,21 @@ USE_L10N = True
 USE_TZ = True
 
 # SHARE_URL = "http://launchwithcode.com/?ref="
-SHARE_URL ="http://10.0.10.108:8000/?ref="
+SHARE_URL ="http://127.0.0.1:8000/?ref="
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+
+STATICFILES_DIRS = ( 
+    os.path.join(BASE_DIR, 'static', 'static_dirs'),
+
+    )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+MEDIA_URL = '/media/'
+
